@@ -20,9 +20,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Seeding for cake_shop_category table
-        DB::table('cake_shop_category')->insert([
-
-        ]);
+        DB::table('cake_shop_category')->insert([]);
 
         // Seeding for cake_shop_orders table
         DB::table('cake_shop_orders')->insert([
@@ -49,7 +47,7 @@ class DatabaseSeeder extends Seeder
         DB::table('cake_shop_users_registrations')->insert([
             // Add your users registrations data here
             // Example:
-            // ['users_username' => 'user1', 'users_email' => 'user1@example.com', 'users_password' => Hash::make('password'), 'hint' => 'first pet', 'users_mobile' => '08123456789', 'users_address' => 'Jl. Sudirman No.1', 'code' => 12345]
+            'users_username' => 'irfan', 'users_email' => 'irfan@gmail.com', 'users_password' => Hash::make('irfan123'), 'hint' => 'first pet', 'users_mobile' => '08123456789', 'users_address' => 'Jl. Sudirman No.1', 'code' => 12345
         ]);
 
         // Seeding for catatan table

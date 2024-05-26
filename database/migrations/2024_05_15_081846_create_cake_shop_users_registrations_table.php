@@ -13,10 +13,10 @@ class CreateCakeShopUsersRegistrationsTable extends Migration
             $table->string('users_username', 100);
             $table->string('users_email', 150);
             $table->string('users_password', 100);
-            $table->string('hint', 100);
+            $table->string('hint', 100)->nullable();
             $table->string('users_mobile', 50);
             $table->string('users_address', 200);
-            $table->mediumInteger('code');
+            $table->mediumInteger('code')->nullable();
             $table->timestamps();
         });
     }
