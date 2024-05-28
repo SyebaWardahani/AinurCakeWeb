@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\CakeShopUser;
+use App\Models\OrderDetail;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Password;
 use Illuminate\Support\Facades\Session;
@@ -12,13 +14,19 @@ use Illuminate\Auth\Events\PasswordReset;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 
+
 class AdminController extends Controller
 {
 public function index()
 {
 return view('admin.index');
-}
 
+}
+public function countUsers()
+    {
+        $count = CakeShopUser::count();
+        return view('admin.index', compact('count'));
+    }
 public function login(Request $request)
 {
 $admin_username = $request->input('admin_username');
@@ -41,6 +49,8 @@ return redirect()->route('admin.index')->with('login_error', true);
 public function dashboard()
 {
 if (session('user_admin_id')) {
+$count = CakeShopUser::count(); // Menghitung jumlah pengguna
+$total_rows = DB::table('cake_shop_orders_detail')->count();
 $admin_username = session('user_admin_username');
 $userCount = DB::table('cake_shop_users_registrations')->count();
 $pengeluaran_hari_ini = DB::table('pengeluaran')->whereDate('tgl_pengeluaran', today())->sum('jumlah');
@@ -51,7 +61,7 @@ $uang = $pemasukan - $pengeluaran;
 
 $sekarang = DB::table('cake_shop_orders')->whereDate('order_date', today())->value('total_amount');
 
-return view('admin.dashboard', compact('admin_username', 'userCount', 'pengeluaran_hari_ini', 'pemasukan_hari_ini',
+return view('admin.dashboard', compact('count','total_rows','admin_username', 'userCount', 'pengeluaran_hari_ini', 'pemasukan_hari_ini',
 'pemasukan', 'pengeluaran', 'uang', 'sekarang'));
 }
 

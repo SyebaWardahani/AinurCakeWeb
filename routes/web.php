@@ -8,11 +8,14 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PengeluaranController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\LaporanBulananController;
+use App\Http\Controllers\CakeShopUserController;
 
 
 Route::get('/', function () {
     return view('admin.index');
 });
+
+Route::get('/cake-shop-users-count', [CakeShopUserController::class, 'countUsers']);
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.index');
