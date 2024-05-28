@@ -117,6 +117,17 @@ return redirect()->route('admin.index');
         }
     }
 
+    public function addUser()
+    {
+        // Menghitung jumlah keseluruhan pengguna
+        $jumlah_pengguna = User::count();
+        
+         // Debugging
+        dd($jumlah_pengguna); // Ini akan menghentikan eksekusi dan menampilkan nilai dari $jumlah_pengguna
+
+        // Mengirim data ke view
+        return view('admin.dashboard', compact('jumlah_pengguna'));
+    }
     public function update(Request $request)
 {
     $request->validate([
@@ -153,6 +164,8 @@ return redirect()->route('admin.index');
 
     // Redirect with success message
     return redirect()->route('admin.account_admin')->with('edit_success', true);
-}
 
+   
+}
+    
 }

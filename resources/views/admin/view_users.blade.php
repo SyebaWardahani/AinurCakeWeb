@@ -182,7 +182,7 @@
                                                         <th>Email</th>
                                                         <th>Mobile</th>
                                                         <th>Address</th>
-                                                        <th>Actions</th>
+                                                    
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -193,12 +193,7 @@
                                                             <td>{{ $user->users_email }}</td>
                                                             <td>{{ $user->users_mobile }}</td>
                                                             <td>{{ $user->users_address }}</td>
-                                                            <td>
-                                                                <button class="btn btn-primary btn-sm edit-user"
-                                                                    data-id="{{ $user->users_id }}">Edit</button>
-                                                                <a href="{{ route('admin.delete_users', ['users_id' => $user->users_id]) }}"
-                                                                    class="btn btn-danger btn-sm">Delete</a>
-                                                            </td>
+                                                            
                                                         </tr>
                                                     @endforeach
                                                 </tbody>
@@ -214,7 +209,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                Copyright © 2023 Concept. Dashboard by D5
+                                Copyright © 2023 Concept. Dashboard by D3
                             </div>
                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                 <div class="text-md-right footer-links d-none d-sm-block">
