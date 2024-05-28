@@ -72,4 +72,6 @@ class UserController extends Controller
 
         return redirect()->route('admin.view_users');
     }
+
+   
 }
