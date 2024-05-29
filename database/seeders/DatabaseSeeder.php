@@ -20,7 +20,12 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // Seeding for cake_shop_category table
-        DB::table('cake_shop_category')->insert([]);
+        DB::table('cake_shop_category')->insert([
+            ['category_name' => 'Kue Basah', 'category_image' => '231123023601.jpg'],
+            ['category_name' => 'Kue Kering', 'category_image' => '231123023455.jpg'],
+            ['category_name' => 'Kue Tart', 'category_image' => '231123023312.jpg'],
+        ]);
+        // DB::table('cake_shop_category')->insert([]);
 
         // Seeding for cake_shop_orders table
         DB::table('cake_shop_orders')->insert([
@@ -38,10 +43,47 @@ class DatabaseSeeder extends Seeder
 
         // Seeding for cake_shop_product table
         DB::table('cake_shop_product')->insert([
-            // Add your product data here
-            // Example:
-            // ['product_name' => 'Kue Basah', 'product_category' => 1, 'product_price' => '50000', 'unit' => 'pcs', 'product_description' => 'Delicious traditional cake', 'product_image' => 'kue_basah.jpg']
+            ['product_name' => 'Apem Selong', 'product_category' => 1, 'product_price' => '3500', 'unit' => 'Per biji', 'product_description' => '', 'product_image' => '2311230243310.jpg'],
+            ['product_name' => 'Black Forest', 'product_category' => 1, 'product_price' => '125000', 'unit' => '/loyang', 'product_description' => '', 'product_image' => '2311270742080.jpg'],
+            ['product_name' => 'Bolu Lapis', 'product_category' => 1, 'product_price' => '120000', 'unit' => '/loyang', 'product_description' => '', 'product_image' => '2311230616550.jpg'],
+            ['product_name' => 'Bolu Susu Toping', 'product_category' => 1, 'product_price' => '120000', 'unit' => '/loyang', 'product_description' => '', 'product_image' => '2311270753320.jpg'],
+            ['product_name' => 'Brownis Kukus', 'product_category' => 1, 'product_price' => '50000', 'unit' => '/mika', 'product_description' => '', 'product_image' => '2311270752450.jpg'],
+            ['product_name' => 'Cake Salju', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270751340.jpg'],
+            ['product_name' => 'Donat Krispy', 'product_category' => 1, 'product_price' => '3000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270750340.jpg, 2311270750341.jpg'],
+            ['product_name' => 'Caramel', 'product_category' => 1, 'product_price' => '75000', 'unit' => '/loyang', 'product_description' => '', 'product_image' => '2311270754520.jpg, 2311270754521.jpg'],
+            ['product_name' => 'Lapis Bunga', 'product_category' => 1, 'product_price' => '3000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270108550.jpg'],
+            ['product_name' => 'Lemper', 'product_category' => 1, 'product_price' => '3000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270109060.jpeg'],
+            ['product_name' => 'Nogosari', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270109200.jpg'],
+            ['product_name' => 'Nastar', 'product_category' => 1, 'product_price' => '70000', 'unit' => '/toples', 'product_description' => '', 'product_image' => '2311270832140.jpeg, 2311270832141.jpg'],
+            ['product_name' => 'Pastel Kering', 'product_category' => 2, 'product_price' => '40000', 'unit' => '/toples', 'product_description' => '', 'product_image' => '2311270832300.jpeg'],
+            ['product_name' => 'Cake Salju Buah', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270832440.jpg'],
+            ['product_name' => 'Pastri Cum Cum', 'product_category' => 1, 'product_price' => '4000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270836360.jpg'],
+            ['product_name' => 'Pai Buah', 'product_category' => 1, 'product_price' => '4000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270842130.jpe'],
+            ['product_name' => 'Pai Toping Coklat', 'product_category' => 1, 'product_price' => '4000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270844290.jpg'],
+            ['product_name' => 'Puding Batik', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270852300.jpg'],
+            ['product_name' => 'Risol Ayam', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270852420.jpg'],
+            ['product_name' => 'Risol Mayo', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270852560.jpg'],
+            ['product_name' => 'Roll Bolen', 'product_category' => 1, 'product_price' => '4000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270109500.jpg, 2311270109501.jpg'],
+            ['product_name' => 'Roti Gulung Batik', 'product_category' => 1, 'product_price' => '70000', 'unit' => '/loyang', 'product_description' => '', 'product_image' => '2311271255460.jpg'],
+            ['product_name' => 'Roti Gulung Rainbow', 'product_category' => 1, 'product_price' => '4000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311271255580.jpg'],
+            ['product_name' => 'Roti Gulung Toping', 'product_category' => 1, 'product_price' => '250000', 'unit' => '/mika', 'product_description' => '', 'product_image' => '2311271256090.jpg'],
+            ['product_name' => 'Roti Pisang Coklat', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311271256210.jpe'],
+            ['product_name' => 'Sagu', 'product_category' => 2, 'product_price' => '75000', 'unit' => '/toples', 'product_description' => '', 'product_image' => '2311271256320.jpg'],
+            ['product_name' => 'Salju', 'product_category' => 2, 'product_price' => '60000', 'unit' => '/toples', 'product_description' => '', 'product_image' => '2311271256450.jpg'],
+            ['product_name' => 'Semprit', 'product_category' => 2, 'product_price' => '60000', 'unit' => '/toples', 'product_description' => '', 'product_image' => '2311271257040.jpe'],
+            ['product_name' => 'Spon Cake', 'product_category' => 1, 'product_price' => '70000', 'unit' => '/loyang', 'product_description' => '', 'product_image' => '2311271257290.jpg'],
+            ['product_name' => 'Sus Buah', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311271258100.jpe'],
+            ['product_name' => 'Sus Bunga', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270105020.jpg'],
+            ['product_name' => 'Sus Mager Jaring', 'product_category' => 1, 'product_price' => '3500', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270110100.png'],
+            ['product_name' => 'Sus Ori', 'product_category' => 1, 'product_price' => '3000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311270110240.jpg'],
+            ['product_name' => 'Tart Full Bunga', 'product_category' => 3, 'product_price' => '300000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311230252370.jpg'],
+            ['product_name' => 'Tart Love', 'product_category' => 3, 'product_price' => '350000', 'unit' => '/biji', 'product_description' => '', 'product_image' => '2311230252500.jpg'],
         ]);
+        // DB::table('cake_shop_product')->insert([
+        //     // Add your product data here
+        //     // Example:
+        //     // ['product_name' => 'Kue Basah', 'product_category' => 1, 'product_price' => '50000', 'unit' => 'pcs', 'product_description' => 'Delicious traditional cake', 'product_image' => 'kue_basah.jpg']
+        // ]);
 
         // Seeding for cake_shop_users_registrations table
         DB::table('cake_shop_users_registrations')->insert([

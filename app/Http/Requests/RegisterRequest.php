@@ -24,9 +24,9 @@ class RegisterRequest extends FormRequest
     public function rules()
     {
         return [
-            'users_username' => 'required|string|min:4|unique:cake_shop_users_registrations',
+            'users_username' => 'required|string|min:4',
             'users_email' => 'required|email|unique:cake_shop_users_registrations',
-            'users_password' => 'required|min:6',
+            'users_password' => 'required|min:2',
             'users_address' => 'required|string|min:6',
             'users_mobile' => 'required|min:6',
         ];
