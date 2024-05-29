@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
+use App\Models\CakeShopUser;
 
 class AccountadminController extends Controller
 {
@@ -21,7 +22,11 @@ class AccountadminController extends Controller
             return redirect()->route('index');
         }
     }
-
+    public function countUsers()
+    {
+        $count = CakeShopUser::count();
+        return view('cake-shop-users-count', compact('count'));
+    }
     public function update(Request $request)
     {
         $request->validate([

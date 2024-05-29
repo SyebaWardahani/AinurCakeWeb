@@ -174,25 +174,6 @@
                                 <div class="card">
                                     <h5 class="card-header">Kelola Order</h5>
                                     <div class="card-body">
-                                        <div class="form-group d-flex">
-                                            <select class="form-control" id="monthFilter" style="width: 20%;">
-                                                <option value="all">All Data</option>
-                                                <option value="01">Januari</option>
-                                                <option value="02">Februari</option>
-                                                <option value="03">Maret</option>
-                                                <option value="04">April</option>
-                                                <option value="05">Mei</option>
-                                                <option value="06">Juni</option>
-                                                <option value="07">Juli</option>
-                                                <option value="08">Agustus</option>
-                                                <option value="09">September</option>
-                                                <option value="10">Oktober</option>
-                                                <option value="11">November</option>
-                                                <option value="12">Desember</option>
-                                            </select>
-                                            <button class="btn btn-primary ml-2"
-                                                onclick="tampilkanData()">Show</button>
-                                        </div>
                                         <div class="table-responsive">
                                             <table class="table table-striped table-bordered first" id="orderTable">
                                                 <thead>
@@ -247,7 +228,7 @@
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                                        Copyright © 2023 Concept. Dashboard by D5
+                                        Copyright © 2023 Concept. Dashboard by D3
                                     </div>
                                     <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                         <div class="text-md-right footer-links d-none d-sm-block">

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
+use App\Models\CakeShopUser;
 
 class UserController extends Controller
 {
@@ -71,5 +72,11 @@ class UserController extends Controller
         DB::table('cake_shop_users_registrations')->where('users_id', $users_id)->delete();
 
         return redirect()->route('admin.view_users');
+    }
+
+    public function countUsers()
+    {
+        $count = CakeShopUser::count();
+        return view('cake-shop-users-count', compact('count'));
     }
 }
