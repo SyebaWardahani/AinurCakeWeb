@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function index(Request $request, $categoryId)
     {
-        $products = Product::where('category_id', $categoryId)->get();
+        $products = Product::where('product_category', $categoryId)->get();
         return response()->json($products);
     }
 

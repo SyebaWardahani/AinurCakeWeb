@@ -89,28 +89,39 @@ class DatabaseSeeder extends Seeder
         DB::table('cake_shop_users_registrations')->insert([
             // Add your users registrations data here
             // Example:
-            'users_username' => 'irfan', 'users_email' => 'irfan@gmail.com', 'users_password' => Hash::make('irfan123'), 'hint' => 'first pet', 'users_mobile' => '08123456789', 'users_address' => 'Jl. Sudirman No.1', 'code' => 12345
+            // 'users_username' => 'irfan', 'users_email' => 'irfan@gmail.com', 'users_password' => Hash::make('irfan123'), 'hint' => 'first pet', 'users_mobile' => '08123456789', 'users_address' => 'Jl. Sudirman No.1', 'code' => 12345
         ]);
 
         // Seeding for catatan table
-        DB::table('catatan')->insert([
-            // Add your catatan data here
-            // Example:
-            // ['catatan' => 'First note']
-        ]);
-
-        // Seeding for pengeluaran table
-        DB::table('pengeluaran')->insert([
-            // Add your pengeluaran data here
-            // Example:
-            // ['tgl_pengeluaran' => '2024-05-01', 'jumlah' => 100000, 'id_sumber' => 1, 'deskripsi' => 'Operational cost']
-        ]);
-
         // Seeding for sumber table
-        DB::table('sumber')->insert([
-            // Add your sumber data here
-            // Example:
-            // ['nama' => 'Bank']
-        ]);
+        // DB::table('sumber')->insert([
+        //     ['id_sumber' => 11, 'nama' => 'bahan kue'],
+        //     ['id_sumber' => 12, 'nama' => 'alat'],
+        //     ['id_sumber' => 13, 'nama' => 'listrik'],
+        //     ['id_sumber' => 14, 'nama' => 'lain-lain'],
+        // ]);
+
+        // // Seeding for catatan table
+        // DB::table('catatan')->insert([
+        //     ['id_catatan' => 1, 'catatan' => 'Besok, Hari minggu akan ada kunjungan dari pihak dinas untuk mengecek kinerja karyawan.'],
+        //     ['id_catatan' => 2, 'catatan' => 'Hari Kamis jam 8 akan ada rapat, diharapkan kepada semua karyawan agar dapat berhadir.'],
+        //     ['id_catatan' => 3, 'catatan' => 'Tingkatkan lagi pendapatan, dan minimalkan pengeluaran'],
+        //     ['id_catatan' => 4, 'catatan' => 'tgl 6 domain dan hosting banyak yang akan expired, dan harus diperpanjang lagi'],
+        // ]);
+
+        // // Seeding for pengeluaran table
+        // DB::table('pengeluaran')->insert([
+        //     ['id_pengeluaran' => 31, 'tgl_pengeluaran' => '2023-10-23', 'jumlah' => 120000, 'id_sumber' => 11, 'deskripsi' => ''],
+        //     ['id_pengeluaran' => 32, 'tgl_pengeluaran' => '2023-10-24', 'jumlah' => 80000, 'id_sumber' => 11, 'deskripsi' => ''],
+        //     ['id_pengeluaran' => 33, 'tgl_pengeluaran' => '2023-10-25', 'jumlah' => 150000, 'id_sumber' => 13, 'deskripsi' => ''],
+        //     ['id_pengeluaran' => 34, 'tgl_pengeluaran' => '2023-10-26', 'jumlah' => 1550000, 'id_sumber' => 12, 'deskripsi' => 'mixer'],
+        //     ['id_pengeluaran' => 35, 'tgl_pengeluaran' => '2023-10-27', 'jumlah' => 50000, 'id_sumber' => 14, 'deskripsi' => 'beli bensin pengiriman'],
+        //     ['id_pengeluaran' => 36, 'tgl_pengeluaran' => '2023-10-28', 'jumlah' => 60000, 'id_sumber' => 11, 'deskripsi' => ''],
+        //     ['id_pengeluaran' => 37, 'tgl_pengeluaran' => '2023-10-29', 'jumlah' => 809000, 'id_sumber' => 12, 'deskripsi' => 'oven'],
+        //     ['id_pengeluaran' => 38, 'tgl_pengeluaran' => '2023-10-30', 'jumlah' => 60000, 'id_sumber' => 14, 'deskripsi' => 'gas'],
+        //     ['id_pengeluaran' => 39, 'tgl_pengeluaran' => '2023-10-31', 'jumlah' => 50000, 'id_sumber' => 13, 'deskripsi' => ''],
+        //     ['id_pengeluaran' => 41, 'tgl_pengeluaran' => '2023-11-01', 'jumlah' => 90000, 'id_sumber' => 11, 'deskripsi' => 'beli bahan inainuino'],
+        //     ['id_pengeluaran' => 42, 'tgl_pengeluaran' => '2023-11-02', 'jumlah' => 50000, 'id_sumber' => 11, 'deskripsi' => 'gfdadsdja'],
+        // ]);
     }
 }
