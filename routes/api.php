@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticationController;
+use App\Http\Controllers\Product\CategoryController;
+use App\Http\Controllers\Product\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,7 @@ Route::middleware('auth:sanctum')->post('change-password', [AuthenticationContro
 Route::middleware('auth:sanctum')->post('logout', [AuthenticationController::class, 'logout']);
 Route::post('login', [AuthenticationController::class, 'login']);
 Route::post('register', [AuthenticationController::class, 'register']);
+
+Route::get('categories', [CategoryController::class, 'index']);
+Route::get('categories/{id}/products', [ProductController::class, 'index']);
+Route::get('product', [ProductController::class, 'product']);
